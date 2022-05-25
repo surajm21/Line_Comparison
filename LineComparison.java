@@ -28,10 +28,17 @@ public class LineComparison {
         double length2 = Math.sqrt((x3-x4)*(x3-x4) + (y3-y4)*(3-y4));
         System.out.println("length of line2 is:"+length2);
 
-             String s1=String.valueOf(length1);
-             String s2=String.valueOf(length2);
+            if (Double.compare(length1, length2) == 0) {
+                System.out.println("Both the lines are equal in length");
+            }
+            else if (Double.compare(length1, length2) < 0) {
+                System.out.println("The second line greater then first line");
+            }
+            else {
+                System.out.println("The first line is greater then second line");
+        }
 
-        System.out.println("the length of two lines are equal or not:"+s1.equals(s2));
+
 
     }
 }
